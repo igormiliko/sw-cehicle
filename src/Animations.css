@@ -1,0 +1,92 @@
+/* https://www.treinaweb.com.br/blog/como-fazer-animacao-infinita-de-fundo-com-css */
+
+.stars {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    box-shadow: 50px 30px white,
+    100px -80px white,
+    80px 120px white,
+    65px 250px white,
+    0px 80px white,
+    80px -120px white,
+    140px -240px white,
+    -140px -140px white,
+    -600px 80px white,
+    -500px 220px white,
+    -430px -420px white,
+    300px 320px white,
+    300px -135px white,
+    -300px -287px white,
+    -260px -320px white,
+    -386px -45px white,
+    -297px -35px white,
+    -150px 65px white,
+    165px 180px white,
+    -250px 72px white,
+    96px 280px white,
+    -324px 165px white,
+    -526px -93px white,
+    80px -320px white,
+    -80px -400px white,
+    500px 98px white;
+    animation: anim-stars 60s linear infinite;
+}
+#Logo {
+    animation: fade-opacity 12s linear;
+}
+
+.shake {
+    animation: shaking 0.8s ease-in-out;
+}
+
+
+.floating{
+    animation: float-constant 6s ease-in infinite 
+}
+
+
+@keyframes float-constant {
+    0%,100%{
+        transform:translatey(0)
+        /* rotate(-5deg) */
+	}
+	50%{
+		transform:translatey(-20px)
+        /* rotate(5deg) */
+        scale(122%)
+	}
+}
+@keyframes anim-stars {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes shaking {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+   
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes fade-opacity {
+    from {
+        opacity: 0;
+        transform: scale(0%);
+    }
+    to {
+        opacity: 100;
+        transform: scale(100%);
+    }
+}
